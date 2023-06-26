@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    text-align: center;
+    background: #30376e;
+    color: #ececec;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.title,
+.subtitle,
+.chat-start {
+    user-select: none;
+}
+
+.title {
+    margin: 0;
+    font-size: 6vmax;
+}
+
+.chat-start {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    color: #30376e;
+    font-weight: 700;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 250ms linear;
+}
+
+.chat-start:hover {
+    box-shadow: 0 0 10px #ececec;
+    transform: translateY(-3px);
+}
+
+.background {
+    display: flex;
+    align-items: center;
+    bottom: 30%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -999;
+    gap: 10px;
+}
+
+.wave {
+    position: relative;
+    background: #7989ff;
+    width: min(100%, 40px);
+    height: min(100%, 100px);
+    border-radius: 100px;
+    margin-left: 30px;
+    animation: wave-animation 4s infinite 150ms;
+}
+
+.wave:nth-child(even) {
+    height: min(100%, 50px);
+    animation: wave-animation-even 4s infinite;
+}
+
+@keyframes wave-animation {
+
+    0%,
+    100% {
+        height: min(100%, 100px);
+    }
+
+    50% {
+        height: min(100%, 50px);
+    }
+}
+
+@keyframes wave-animation-even {
+
+    0%,
+    100% {
+        height: min(100%, 50px);
+    }
+
+    50% {
+        height: min(100%, 100px);
+    }
+}
